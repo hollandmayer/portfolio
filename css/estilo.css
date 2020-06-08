@@ -1,0 +1,91 @@
+/*
+background-image: url() = especifica a imagem a ser utilizada como plano de fundo.
+
+background-size: cover = especifica que a imagem de fundo deve ser dimensionada de acordo com o recipiente, assegurando que ambas as dimensões (altura e largura) são são maiores ou iguais ao container.
+
+background-repeat: no-repeat = especifica que a imagem de fundo não deve se repetir.
+
+background-attachment: scroll = especifica que a imagem de fundo deve rolar junto com a página.
+
+Fazendo a imagem ocupar todo o viewport: utilizar unidade de medida relativa, que é bastante usada no design responsivo: vh e vw. A medida vh é igual a 1/100 da altura da viewport. Então, por exemplo, se a altura do navegador é 900px, 1vh equivale a 9px e, analogamente, se a largura da viewport é 750px, 1vw equivale a 7.5px.
+
+width: 100vw = largura da área de conteúdo do elemento igual a 100% da viewport na horizontal.
+
+height: 100vh = altura da área do conteúdo de um elemento igual a 100% da viewport na vertical.
+
+font-size = tamanho da fonte.
+*/
+body{
+    
+    background-image: url("../imagens/fundoTrans50.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    
+    width: 100vw;
+    height: 100vh;
+
+    font-size: 12px;
+}
+
+header{
+    height: 100vh;
+}
+
+/*
+background-color: white = definindo a cor de fundo do nav para branco.
+*/
+.menu{
+    background-color: white;
+}
+
+/*
+list-style: none = define que não haverá nenhum tipo de marcador de lista.
+*/
+.menu li{
+    list-style: none;
+}
+
+/*
+display: flex = torna elementos filhos do ul como flex. Nessa situação eles se organizam em linha pois o valor padrão de flex-direction é row.
+
+justify-content: space-around = propriedade que só funciona quando temos display:flex. Justifica os elementos da flexbox para se distribuirem com distâncias iguais entre si e também distantes entre as bordas direita e esquerda.
+*/
+.menu ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+/*
+color: teal = definine o valor da cor de um elemento com seu conteúdo em texto e seus decorações (estilos).
+
+text-decoration: none = retira as linhas decorativas do texto.   
+*/
+a{
+    color: teal;
+    text-decoration: none;
+}
+
+/*
+text-decoration: underline = coloca sublinhado no texto quando o mouse passa por cima dele.    
+*/
+a:hover{
+    text-decoration: underline;
+}
+
+/*
+text-align = utilizada para alinhar o conteúdo interno de um elemento de bloco. Ele afeta qualquer elemento inline ou inline-block no container. Seus valores são: left (default), right, center, justify e inherit. Dois novos valores são start e end, dependendo do tipo de linguagem usada (ltr ou rtl) se comportam como left ou right.
+
+color: teal = definine o valor da cor de um elemento com seu conteúdo em texto e seus decorações (estilos).
+*/
+.site-title, .site-subtitle{
+    text-align: center;
+    color: teal;
+}
+
+/*
+font-style = define o estilo do texto se itálico, oblíquo ou normal (default)
+*/
+.site-subtitle{
+    font-style: italic;
+}
